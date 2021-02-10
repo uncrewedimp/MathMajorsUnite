@@ -1,3 +1,7 @@
+## Dolphyn Small Business Insights
+
+Georgia Channing, Harry Channing, Owen Queen, Shannon Hall
+
 # Introduction
 
 WORDS
