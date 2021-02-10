@@ -1,23 +1,23 @@
-## Dolphyn Small Business Insights
+# Dolphyn Small Business Insights
 
 Georgia Channing, Harry Channing, Owen Queen, Shannon Hall
 
-# Introduction
+## Introduction
 
 WORDS
 
-# Customer Value
+## Customer Value
 
 WORDS
 
-# Technology
+## Technology
 
 WORDS
 
-# Team
+## Team
 
 WORDS
 
-# Project Management
+## Project Management
 
 WORDS
