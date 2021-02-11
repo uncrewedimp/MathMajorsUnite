@@ -48,6 +48,8 @@ Shannon: Shannon has worked with Python for about two years for various classes 
 
 Harry: Harry has little experience in Python (only CS 425) and none in Django, but has had experience putting together ML tools through CS 425 and implementing them for an autism classification research project. This can be helpful in the iterative steps, creating additional possibilities for the outcome of the project.
 
+Georgia: Georgia has extensive experience in Python: She wrote her Bachelor's thesis in ML for Healthcase based in Python and SQL and now works full-time coding in Python. She has no Django experience, but is excited to branch out into front-end development.
+
 
 ## Project Management
 
