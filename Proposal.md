@@ -30,6 +30,8 @@ Georgia Channing, Harry Channing, Owen Queen, Shannon Hall
   To test our system, we will feed in common datasets, such as those from Kaggle, that we can use as a demonstration of how our system operates. Using our system, we will attempt to build ML models that analyze this data, performing various classification and/or regression tasks. These sorts of tasks will mimic the use-cases that one of customers might have for our product.  
   
   The project will be implemented primarily in Python, but it may require some other web development tools such as Javascript, HTML, or CSS. We will implement the front-end component in Django, a web framework implemented in Python. The back-end will be implemented in various ML libraries such as Scikit-Learn, TensorFlow, and PyTorch. To perform data preprocessing, we may need to incorporate other classic data science libraries such as Pandas and Numpy.
+  
+![Block Diagram](https://github.com/CS340-21/MathMajorsUnite/blob/main/block_diagram.png)
 
 
 ## Team
