@@ -6,7 +6,11 @@ Georgia Channing, Harry Channing, Owen Queen, Shannon Hall
 
 ## Introduction
 
-WORDS
+  Machine learning has become an increasingly prevalent tool in business from product recommendations to user feedback interpretation.  Most of the organizations that moved quickly to integrate machine learning techniques into their workflows had the resources to hire machine learning engineers and data scientists to turn their data into actionable insights.  Hiring machine learning engineers and data scientists is expensive, and is out of reach for most small and medium businesses.  That doesn’t mean that they shouldn’t be able to leverage machine learning to improve their businesses and make their lives easier.  Enter Dolphyn: a one-stop shop for interpreting large scale customer feedback.  Machine learning shouldn’t be monopolized by Fortune500 companies, but should be available to small and medium businesses, who now more than ever need all the support they can get.  
+
+  While there exist lots of plug-and-play machine learning libraries, Keras, sci-kit learn, TensorFlow, even the small amount of coding necessary to get models up and running is a barrier to entry.  Our product will smooth the path to integrating machine learning into small business workflows by creating an easy-to-use interactive web platform. Our product will cut down on the overhead needed for the preprocessing steps of machine learning, and it will ideally give small businesses the tools they need to incorporate machine learning into their workflow.  
+
+  Our team has varying degrees of experience with machine learning and the preprocessing steps that we will need to implement. We are all fairly new to web application development, so creating both a front and back end for a web application will be a big part of our project and a big learning experience overall. All team members have experience with the Python programming language, which is what we will primarily use for the project through the Django library. We expect that the mixture of math, computer science, and business backgrounds within our team will help us to successfully implement the features that we will need, all the while focusing on the needs of our potential clients.
 
 ## Customer Value
 
