@@ -1,6 +1,6 @@
 # Dolphyn Small Business Insights
 
-Math Majors Unite  
+Team: Math Majors Unite  
   
 Georgia Channing, Harry Channing, Owen Queen, Shannon Hall
 
