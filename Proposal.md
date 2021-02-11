@@ -31,7 +31,9 @@ Georgia Channing, Harry Channing, Owen Queen, Shannon Hall
   
   The project will be implemented primarily in Python, but it may require some other web development tools such as Javascript, HTML, or CSS. We will implement the front-end component in Django, a web framework implemented in Python. The back-end will be implemented in various ML libraries such as Scikit-Learn, TensorFlow, and PyTorch. To perform data preprocessing, we may need to incorporate other classic data science libraries such as Pandas and Numpy.
   
-![Block Diagram](https://github.com/CS340-21/MathMajorsUnite/blob/main/block_diagram.png)
+<p align = "center">
+  <img src="https://github.com/CS340-21/MathMajorsUnite/blob/main/block_diagram.png">
+</p>
 
 
 ## Team
