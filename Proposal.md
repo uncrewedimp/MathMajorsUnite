@@ -71,4 +71,4 @@ A tentative schedule for our project is shown below:
 
 ## Sources
 
-[1] https://www.forbes.com/sites/forbestechcouncil/2020/09/24/14-smart-ways-to-leverage-machine-learning-for-small-businesses/?sh=6135b65b3e79
+[1] "14 Smart Ways To Leverage Machine Learning For Small Businesses," Forbes, 2-10-21. [Online]. Available:  https://www.forbes.com/sites/forbestechcouncil/2020/09/24/14-smart-ways-to-leverage-machine-learning-for-small-businesses/?sh=6135b65b3e79
