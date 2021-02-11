@@ -6,7 +6,7 @@ Georgia Channing, Harry Channing, Owen Queen, Shannon Hall
 
 ## Introduction
 
-  Machine learning has become an increasingly prevalent tool in business from product recommendations to user feedback interpretation.  Most of the organizations that moved quickly to integrate machine learning techniques into their workflows had the resources to hire machine learning engineers and data scientists to turn their data into actionable insights.  Hiring machine learning engineers and data scientists is expensive, and is out of reach for most small and medium businesses.  That doesn’t mean that they shouldn’t be able to leverage machine learning to improve their businesses and make their lives easier.  Enter Dolphyn: a one-stop shop for interpreting large scale customer feedback.  Machine learning shouldn’t be monopolized by Fortune500 companies, but should be available to small and medium businesses, who now more than ever need all the support they can get.  
+  Machine learning has become an increasingly prevalent tool in business from product recommendations to user feedback interpretation.  Most of the organizations that moved quickly to integrate machine learning techniques into their workflows had the resources to hire machine learning engineers and data scientists to turn their data into actionable insights.  Hiring machine learning engineers and data scientists is expensive, and is out of reach for most small and medium businesses.  That doesn’t mean that they shouldn’t be able to leverage machine learning to improve their businesses and make their lives easier.  Enter Dolphyn: a one-stop shop for interpreting large scale customer feedback.  Machine learning shouldn’t be monopolized by Fortune500 companies, but should be available to small and medium businesses, who now more than ever need all the support they can get [1].  
 
   While there exist lots of plug-and-play machine learning libraries, Keras, sci-kit learn, TensorFlow, even the small amount of coding necessary to get models up and running is a barrier to entry.  Our product will smooth the path to integrating machine learning into small business workflows by creating an easy-to-use interactive web platform. Our product will cut down on the overhead needed for the preprocessing steps of machine learning, and it will ideally give small businesses the tools they need to incorporate machine learning into their workflow.  
 
@@ -71,4 +71,4 @@ A tentative schedule for our project is shown below:
 
 ## Sources
 
-https://www.forbes.com/sites/forbestechcouncil/2020/09/24/14-smart-ways-to-leverage-machine-learning-for-small-businesses/?sh=6135b65b3e79
+[1] https://www.forbes.com/sites/forbestechcouncil/2020/09/24/14-smart-ways-to-leverage-machine-learning-for-small-businesses/?sh=6135b65b3e79
