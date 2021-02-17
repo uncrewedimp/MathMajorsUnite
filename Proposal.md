@@ -1,5 +1,9 @@
 # Dolphyn Small Business Insights
 
+<p align = "center">
+  <img src="https://github.com/CS340-21/MathMajorsUnite/blob/main/dolphyn_logo.png" width="200" height="200">
+</p>
+
 Team: Math Majors Unite  
   
 Members: Georgia Channing, Harry Channing, Owen Queen, Shannon Hall
