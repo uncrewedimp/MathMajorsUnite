@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-  return HttpResponse('<h1>Preprocessing Home</h1>')
+  return render(request, 'preprocessing/home.html')
 
 def about(request):
-  return HttpResponse('<h1>Preprocessing About</h1>')
+  return render(request, 'preprocessing/about.html')
