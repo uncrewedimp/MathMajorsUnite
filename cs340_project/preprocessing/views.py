@@ -6,3 +6,9 @@ def index(request):
 
 def about(request):
   return render(request, 'preprocessing/about.html')
+
+def image(request):
+  return render(request, 'preprocessing/image.html')
+
+def text(request):
+  return render(request, 'preprocessing/text.html')
