@@ -22,6 +22,7 @@
                 <tr>
                     <th>Title</th>
                     <th>Download</th>
+                    <th>Delete</th>
                 </tr>
             </thread>
             <tbody>
@@ -32,6 +33,13 @@
                             <a href="{{ img.img_zip.url }}" class = "btn btn-primary btn-sm">
                                 Download Zipped Images
                             </a>
+                        </td>
+                        <td>
+                            <!-- Always use post to modify data in database -->
+                            <form method="post" action="{% url 'delete_image' img.pk %}">
+                                {% csrf_token %}
+                                <button type="submit" class="btnm btn-danger btn-sm">Remove</button>
+                            </form>
                         </td>
                     </tr>
                 {% endfor %}

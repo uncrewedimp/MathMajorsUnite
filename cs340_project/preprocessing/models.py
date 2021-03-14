@@ -9,3 +9,9 @@ class Images(models.Model):
 
     def __str__(self):
         return self.title
+
+    def delete(self, *args, **kwargs):
+        # Makes sure this class deletes the file from local storage
+        self.img_zip.delete()
+        super().delete(*args, **kwargs)
+

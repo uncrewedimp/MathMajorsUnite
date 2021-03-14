@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.views.generic import TemplateView
 from django.http import HttpResponse
 from django.core.files.storage import FileSystemStorage
 
@@ -24,7 +25,7 @@ def image(request):
       
   else: # If not a post request, instantiate empty form
     form = ImagesForm()
-    
+
   #  uploaded_file = request.FILES['img_data']
   #  fs = FileSystemStorage()
   #  name = fs.save(uploaded_file.name, uploaded_file)
@@ -37,6 +38,12 @@ def image(request):
   context['form'] = form
 
   return render(request, 'preprocessing/image.html', context)
+
+def delete_image(request, pk):
+  if request.method == 'POST':
+    img = Images.objects.get(pk=pk)
+    img.delete()
+  return redirect('preprocessing-image')
 
 def text(request):
   return render(request, 'preprocessing/text.html')
