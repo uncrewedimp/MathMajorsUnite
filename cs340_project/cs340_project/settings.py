@@ -127,3 +127,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'), 
     os.path.join(BASE_DIR, 'boot')
 ]
+
+# Serving and Downloading files:
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    # Where to put the files when uploaded
+
+# Can be wherever the file is viewable online if we're in debug mode
+# Maybe outside of debug mode - not sure
+MEDIA_URL = '/media/'
