@@ -8,7 +8,8 @@ urlpatterns = [
     path('about/', views.about, name='preprocessing-about'),
     path('image/', views.image, name='preprocessing-image'),
     path('image/<int:pk>/', views.delete_image, name='delete_image'),
-    path('text/', views.text, name='preprocessing-text')
+    path('text/', views.text, name='preprocessing-text'),
+    path('text/<int:pk>/', views.delete_text, name='delete_text')
 ]
 
 if settings.DEBUG:

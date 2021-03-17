@@ -3,8 +3,8 @@ from django.views.generic import TemplateView
 from django.http import HttpResponse
 from django.core.files.storage import FileSystemStorage
 
-from .forms import ImagesForm
-from .models import Images
+from .forms import ImagesForm, TextForm
+from .models import Images, Text
 
 def index(request):
   return render(request, 'preprocessing/index.html')
@@ -46,4 +46,28 @@ def delete_image(request, pk):
   return redirect('preprocessing-image')
 
 def text(request):
-  return render(request, 'preprocessing/text.html')
+  # Allows us to send data back to the HTML page
+  context = {}
+
+  # Image loading code:
+  if request.method == "POST":
+    form = TextForm(request.POST, request.FILES)
+    if form.is_valid():
+      form.save()
+      
+  else: # If not a post request, instantiate empty form
+    form = TextForm()
+
+  txts = Text.objects.all()
+  context['texts'] = txts
+
+  # Get form
+  context['form'] = form
+  return render(request, 'preprocessing/text.html', context)
+
+def delete_text(request, pk):
+  '''Allows you to delete text from database'''
+  if request.method == 'POST':
+    img = Text.objects.get(pk=pk)
+    img.delete()
+  return redirect('preprocessing-text')
