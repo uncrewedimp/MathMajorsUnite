@@ -20,39 +20,40 @@
   <title>Dolphyn</title>
 
   <style>
-    .navbar-custom { 
-        background-color: rgb(4, 165, 206); 
+    .navbar-custom {
+      background-color: rgb(4, 165, 206);
     }
 
     .navbar-custom .navbar-brand,
     .navbar-custom .navbar-text,
     .navbar-custom .nav-link {
-        color: black;
-        background-color: rgb(4, 165, 206); 
+      color: black;
+      background-color: rgb(4, 165, 206);
     }
-    </style>
+  </style>
 </head>
 
 <body>
   <!-- Navigation Bar -->
   <header class="site-header">
     <nav class="navbar navbar-expand-lg navbar-custom navbar-dark">
-        <!-- <a class="navbar-brand">Dolphyn Small Business Insights</a> -->
-        <a class="navbar-brand mr-4" href="{% url 'preprocessing-index' %}">Dolphyn Small Business Insights</a>
-        <!-- <a class="nav-link" href="about">About</a> !-->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+      <!-- <a class="navbar-brand">Dolphyn Small Business Insights</a> -->
+      <a class="navbar-brand mr-4" href="{% url 'preprocessing-index' %}">Dolphyn Small Business Insights</a>
+      <!-- <a class="nav-link" href="about">About</a> ! -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
-        <div class="collapse navbar-collapse" id="navbarToggle">
-            <ul class="navbar-nav mr-auto">
-                <!-- <li class="nav-item"> -->
-                    <a class="nav-item nav-link" href="{% url 'preprocessing-index' %}">Home</a>
-                    <a class="nav-link" href="{% url 'preprocessing-about' %}">About</a>
-                <!-- </li> -->
-            </ul>
-        </div>
+      <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <ul class="navbar-nav mr-auto">
+          <!-- <li class="nav-item"> -->
+          <a class="nav-item nav-link" href="{% url 'preprocessing-index' %}">Home</a>
+          <a class="nav-link" href="{% url 'preprocessing-about' %}">About</a>
+          <!-- </li> -->
+        </ul>
+      </div>
     </nav>
     <!-- <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
       <div class="container">
@@ -67,13 +68,13 @@
             <a class="nav-item nav-link" href="{% url 'preprocessing-about' %}">About</a>
             <a class="nav-item nav-link" href="#">Other tools</a>
           </div> -->
-          <!-- Navbar Right Side -->
-          <!-- <div class="navbar-nav">
+    <!-- Navbar Right Side -->
+    <!-- <div class="navbar-nav">
             <a class="nav-item nav-link" href="#">Login</a>
             <a class="nav-item nav-link" href="#">Register</a>
           </div> -->
-        </div>
-      </div>
+    </div>
+    </div>
     </nav>
   </header>
 
