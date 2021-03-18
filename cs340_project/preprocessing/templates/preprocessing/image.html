@@ -1,22 +1,43 @@
 {% extends 'preprocessing/base.html' %}
 {% block content %}
-<h1>Image Preprocessing</h1>
-<p>Here you can upload files for image preprocessing. After the preprocessing, you can redownload your files. </p>
 
-<h2>Upload</h2>
+<div class="jumbotron">
+    <h1 class="display-4">Image Preprocessing</h1>
+    <p class="lead">Here you can upload files for image preprocessing. After the preprocessing, you can redownload your
+        files.</p>
+</div>
+
+<!-- <h2>Upload</h2>
 <form method="post" enctype='multipart/form-data'>
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="btn btn-primary">Upload file</button>
-</form>
+</form> -->
 
 <!-- url is the uploaded file -->
 <!-- {% if url %}
         <p>Uploaded file: <a href="{{ url }}">{{ url }}</a></p>
     {% endif %} -->
 
+<div class="row justify-content-center">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title text-center">Upload files here!</h5>
+
+                <form method="post" enctype='multipart/form-data'>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Upload file</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 {% if images %}
-<h2>Images</h2>
+<!-- <h2>Images</h2> -->
 <table class="table">
     <thread>
         <tr>

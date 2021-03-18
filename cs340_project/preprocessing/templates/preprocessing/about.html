@@ -1,5 +1,58 @@
 {% extends 'preprocessing/base.html' %}
 {% block content %}
-<h1>About Page</h1>
-<p>This is a work in progress.</p>
+<div class="jumbotron">
+  <h1 class="display-4">About Page</h1>
+  <!-- <p class="lead">This is a work in progress.</p> -->
+
+  <div class="row">
+
+    <div class="col-sm-4">
+      <div class="card text-white bg-warning">
+        <div class="card-body">
+          <h5 class="card-title">We Process Your Data</h5>
+          <p class="card-text">We take the data you feed us and chop it into portions for model creation, then
+            standardize and normalize it. Doing this allows us to prevent skewing from different measuring types and/or
+            scales.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="card text-white bg-danger">
+        <div class="card-body">
+          <h5 class="card-title">We Make You a Classification Model</h5>
+          <p class="card-text">We use a variety of machine learning techniques with your processed data to generate as
+            accurate a model as possible (without overfitting). </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="card text-white bg-info">
+        <div class="card-body">
+          <h5 class="card-title">We Run the Model on New Data</h5>
+          <p class="card-text">You want to predict how your customers or products will act based on the attributes you
+            had. We take your data, process it, and then feed you back the predictions.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <br>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+      <div class="card text-white bg-success">
+        <div class="card-body">
+          <h5 class="card-title text-center">Get Started!</h5>
+          <a href="{% url 'preprocessing-index'%}" class="stretched-link"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-4">
+  <p>Created by Owen Queen, Harry Channing, Georgia Channing, and Shannon Hall.</p>
+</div>
 {% endblock content %}
