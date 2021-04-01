@@ -2,8 +2,8 @@
 {% block content %}
 
 <div class="jumbotron">
-    <h1 class="display-4">Text Preprocessing</h1>
-    <p class="lead">Here you can upload files for text preprocessing. After the preprocessing, you can redownload your
+    <h1 class="display-4">CSV Preprocessing</h1>
+    <p class="lead">Here you can upload files for CSV preprocessing. After the preprocessing, you can redownload your
         files.</p>
 </div>
 
@@ -64,4 +64,10 @@
 
 </table>
 {% endif %}
+
+
+<h2>Preprocessing</h2>
+<form action="{% url 'process_text' %}">
+    <button class = 'btn btn-primary btn-sm' style = 'font-size: 20px' >Start Processing!</button>
+</form>
 {% endblock content %}
