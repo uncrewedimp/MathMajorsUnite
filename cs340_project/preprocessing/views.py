@@ -13,7 +13,6 @@ def about(request):
   return render(request, 'preprocessing/about.html')
 
 def image(request):
-
   # Allows us to send data back to the page
   context = {}
 
@@ -71,3 +70,14 @@ def delete_text(request, pk):
     img = Text.objects.get(pk=pk)
     img.delete()
   return redirect('preprocessing-text')
+
+#def start_text_button(request):
+#  return redirect('preprocessing-text')
+
+def process_text(request):
+  # Processing text data (i.e. user interaction)
+  return render(request, 'preprocessing/process_text.html')
+
+def process_image(request):
+  # Processing image data (i.e. user interaction)
+  return render(request, 'preprocessing/process_image.html')

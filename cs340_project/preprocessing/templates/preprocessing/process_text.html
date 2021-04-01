@@ -1,0 +1,22 @@
+{% extends 'preprocessing/base.html' %}
+{% block content %}
+
+<h1>Process Your CSV Files</h1>
+
+<!-- List different functionalities in h2 headers -->
+<h2>Merging Files</h2>
+<!-- button for calling function to merge files -->
+<form method = "post" action = "{% url 'text_call' %}?fn_code=1">
+    {% csrf_token %}
+    <button class = "btn btn-primary btn-sm">Merge</button>
+</form>
+
+<h2>Editing Columns</h2>
+<!-- button for calling function to edit columns -->
+
+<!-- {% if code %}
+    <h1>{{ fn_code }}</h1>
+    <h2>hello</h2>
+{% endif %} -->
+
+{% endblock content %}
