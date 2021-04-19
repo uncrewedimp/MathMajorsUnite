@@ -6,6 +6,10 @@ from django.core.files.storage import FileSystemStorage
 from .forms import ImagesForm, TextForm
 from .models import Images, Text
 
+import pandas as pd
+import sys; sys.path.append('media')
+import os
+
 def index(request):
   return render(request, 'preprocessing/index.html')
 
@@ -76,7 +80,51 @@ def delete_text(request, pk):
 
 def process_text(request):
   # Processing text data (i.e. user interaction)
-  return render(request, 'preprocessing/process_text.html')
+
+  context = {}
+
+  # # Image loading code:
+  # if request.method == "POST":
+  #   form = TextForm(request.POST, request.FILES)
+  #   if form.is_valid():
+  #     form.save()
+      
+  # else: # If not a post request, instantiate empty form
+  #   form = TextForm()
+
+  txts = Text.objects.all()
+  context['texts'] = txts
+  context['nfiles'] = Text.objects.count()
+
+  print('HELLO')
+
+  fs = Text.objects.values('txt')[0]['txt']
+
+  file_list = list(Text.objects.values('txt'))
+  for f in file_list:
+    temp_df = pd.read_csv(os.path.join('media', f['txt']))
+    Text.objects.update_or_create(
+      txt = f['txt'], 
+      rows = temp_df.shape[0], 
+      cols = temp_df.shape[1]
+    )
+  
+  print(fs)
+  print(type(fs))
+
+  #sys.path.append('media')
+  df = pd.read_csv(os.path.join('media', fs))
+  #df = pd.read_csv(fs)
+  #df = pd.read_csv('../media/text/upec_meta.csv')
+  print(df.shape)
+
+  # Get form
+  #context['form'] = form
+
+  #df = pd.DataFrame(txts)
+  #print(df)
+
+  return render(request, 'preprocessing/process_text.html', context)
 
 def process_image(request):
   # Processing image data (i.e. user interaction)

@@ -3,6 +3,43 @@
 
 <h1>Process Your CSV Files</h1>
 
+<h2>Your Files</h2>
+{% if texts %}
+<table class="table">
+    <thread>
+        <tr>
+            <th>Title</th>
+            <th>Rows</th>
+            <th>Columns</th>
+        </tr>
+    </thread>
+    <tbody>
+        {% for tx in texts %}
+        <tr>
+            <td>{{ tx.title }}</td>
+            <td>
+                {{ tx.rows }}
+                <!-- <a href="{{ tx.txt.url }}" class="btn btn-primary btn-sm">
+                    Download
+                </a> -->
+            </td>
+            <td>
+                <!-- Always use post to modify data in database
+                <form method="post" action="{% url 'delete_text' tx.pk %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btnm btn-danger btn-sm">Remove</button>
+                </form> -->
+                {{ tx.cols }}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>Sorry, you don't have any files uploaded right now. Please go back to the <a href="{% url 'preprocessing-text'%}">upload page</a> to load some files!</p>
+
+{% endif %}
+
 <!-- List different functionalities in h2 headers -->
 <h2>Merging Files</h2>
 <!-- button for calling function to merge files -->
