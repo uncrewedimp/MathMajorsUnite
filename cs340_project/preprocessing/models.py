@@ -19,6 +19,12 @@ class Text(models.Model):
     title = models.CharField(max_length = 100)
     txt = models.FileField(upload_to = 'media/text/')
 
+    rows = models.PositiveIntegerField(default = 0)
+    cols = models.PositiveIntegerField(default = 0)
+
+    # Records date that data was added:
+    added = models.DateTimeField(auto_now = True)
+
     def __str__(self):
         return self.title
 
