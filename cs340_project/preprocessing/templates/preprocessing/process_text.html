@@ -42,6 +42,7 @@
             <th>Title</th>
             <th>Rows</th>
             <th>Columns</th>
+            <th>Generate Report</th>
         </tr>
     </thread>
     <tbody>
@@ -55,12 +56,21 @@
                 </a> -->
             </td>
             <td>
-                <!-- Always use post to modify data in database
+                <!-- Always use post to modify data in database -->
+                
+                {{ tx.cols }}
+            </td>
+            <!-- <td>
                 <form method="post" action="{% url 'delete_text' tx.pk %}">
                     {% csrf_token %}
                     <button type="submit" class="btnm btn-danger btn-sm">Remove</button>
-                </form> -->
-                {{ tx.cols }}
+                </form>
+            </td> -->
+            <td>
+                <form method='post' action="{% url 'generate_report' tx.pk %}">
+                    {% csrf_token %}
+                    <button type="submit" class='btn btn-primary btn-sm'>Generate Report</button>
+                </form>
             </td>
         </tr>
         {% endfor %}

@@ -3,28 +3,20 @@
 
 <div class="jumbotron">
     <h1 class="display-4">CSV Preprocessing</h1>
-    <p class="lead">Here you can upload files for CSV preprocessing. After the preprocessing, you can redownload your
-        files.</p>
+    <p class="lead">Go to the link below to upload your CSV files.</p>
 </div>
-
-
-<!-- <h2>Upload</h2>
-<form method="post" enctype='multipart/form-data'>
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="btn btn-primary">Upload file</button>
-</form> -->
 
 <div class="row justify-content-center">
     <div class="col-sm-6">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title text-center">Upload files here!</h5>
-
-                <form method="post" enctype='multipart/form-data'>
+                <!-- <form method="post" enctype='multipart/form-data'>
                     {% csrf_token %}
                     {{ form.as_p }}
                     <button type="submit" class="btn btn-primary">Upload file</button>
+                </form> -->
+                <form action="{% url 'upload_text' %}">
+                    <button class = 'btn btn-primary btn-sm' style = 'font-size: 30px'>Upload CSVs</button>
                 </form>
             </div>
         </div>
@@ -32,8 +24,8 @@
 </div>
 
 
-{% if texts %}
 <h2>Uploaded CSV Files</h2>
+{% if texts %}
 <table class="table">
     <thread>
         <tr>
@@ -63,6 +55,8 @@
     </tbody>
 
 </table>
+{% else %}
+<p>Looks like you haven't uploaded any files yet! Click the link above to upload your first file.</p>
 {% endif %}
 
 

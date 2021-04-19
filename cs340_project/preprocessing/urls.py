@@ -9,11 +9,14 @@ urlpatterns = [
     path('image/', views.image, name='preprocessing-image'),
     path('image/<int:pk>/', views.delete_image, name='delete_image'),
     path('text/', views.text, name='preprocessing-text'),
+    path('text/text_upload', views.upload_text, name = 'upload_text'),
     path('text/<int:pk>/', views.delete_text, name='delete_text'),
     path('process_text/', views.process_text, name = 'process_text'),
+    path('process_text/report<int:pk>/', views.generate_report, name = 'generate_report'),
     path('process_image/', views.process_image, name = 'process_image'),
     path('process_text/a/', processing.redirect_text_process, name = 'text_call'),
-    path('process_image/', processing.redirect_img_process, name = 'img_call')
+    path('process_image/', processing.redirect_img_process, name = 'img_call'),
+    
 ]
 
 if settings.DEBUG:
