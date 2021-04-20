@@ -109,8 +109,6 @@ def process_text(request):
   context['texts'] = txts
   context['nfiles'] = Text.objects.count()
 
-  print('HELLO')
-
   # fs = Text.objects.values('txt')[0]['txt']
 
   # file_list = list(Text.objects.values('txt'))
@@ -166,3 +164,22 @@ def generate_report(request, pk):
     context['name'] = f.title
 
   return render(request, 'preprocessing/report.html', context)
+
+def edit_file(request):
+  '''Edits data for one individual file'''
+  context = {}
+
+  if request.method == 'POST':
+    pk = request.POST.getlist('pk')[0]
+
+  # Retrieve file from database:
+  f = Text.objects.get(pk=pk)
+  context['name'] = f.title
+
+  # Make pandas dataframe of file:
+  df = pd.read_csv(f.filename())
+  context['columns'] = df.columns
+
+  context['pk'] = pk
+
+  return render(request, 'preprocessing/edit_file.html', context)

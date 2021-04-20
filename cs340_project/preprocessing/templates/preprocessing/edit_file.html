@@ -1,0 +1,41 @@
+{% extends 'preprocessing/base.html' %}
+{% block content %}
+
+<div class="jumbotron">
+    <h1 class="display-4">{{ name }} Editing</h1>
+    <p class="lead">Tell us what you want to do with your data.</p>
+</div>
+
+<div class="container">
+    <h2 class="text-center">Rename Columns</h2>
+    <table class = "table">
+        <thead>
+            <tr>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for c in columns %}
+            <tr>
+                <th>{{ c }}</th>
+                <form method="post" action="{% url 'rename'%}">
+                    {% csrf_token %}
+                    <th>
+                        <input type='text' name='new_name'>
+                        <input type='hidden' name='pk' value='{{ pk }}'>
+                        <input type='hidden' name='c' value='{{ c }}'>
+                    </th>
+                    <th>
+                        <button type="submit" class='btn btn-primary btn-sm'>Rename Column</button>
+                    </th>
+                </form>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<form action="{% url 'process_text' %}">
+    <button>Back to Processing</button>
+</form>
+{% endblock content %}
