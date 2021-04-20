@@ -43,6 +43,7 @@
             <th>Rows</th>
             <th>Columns</th>
             <th>Generate Report</th>
+            <th>Edit Files</th>
         </tr>
     </thread>
     <tbody>
@@ -72,6 +73,13 @@
                     <button type="submit" class='btn btn-primary btn-sm'>Generate Report</button>
                 </form>
             </td>
+            <td>
+                <form method='post' action="{% url 'edit_file' %}">
+                    {% csrf_token %}
+                    <input type='hidden' value='{{ tx.pk }}' name='pk'>
+                    <button type="submit" class='btn btn-primary btn-sm'>Edit File</button>
+                </form>
+            </td>
         </tr>
         {% endfor %}
     </tbody>
@@ -85,11 +93,33 @@
 <!-- List different functionalities in h2 headers -->
 <h2 class="text-center">Merging Files</h2>
 <!-- button for calling function to merge files -->
-<form method="post" action="{% url 'text_call' %}?fn_code=1">
+<!-- <form method="post" action="{% url 'text_call' %}?fn_code=1"> -->
+<form method="post" action="{% url 'merge' %}">
     {% csrf_token %}
-    <div class="text-center">
+    <table class="table">
+        <thread>
+            <tr>
+                <th>Title</th>
+                <th>Merge?</th>
+            </tr>
+        </thread>
+        <tbody>
+            {% for tx in texts %}
+            <tr>
+                <td>{{ tx.title }}</td>
+                <td>
+                    <input type="checkbox" name="merge_files" value='{{ tx.pk }}'></input>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <input type='text' name='merge_fname'>
+    <button type='submit'>Merge Files</button>
+    <!-- <div class="text-center">
         <button class="btn btn-primary btn-lg">Merge</button>
-    </div>
+    </div> -->
     <br>
 </form>
 
