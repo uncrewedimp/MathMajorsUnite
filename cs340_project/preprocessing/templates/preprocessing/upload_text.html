@@ -27,7 +27,9 @@
 <h3>Done Uploading?</h3>
 <p>Go to the link below for an overview of your files. From here, you can begin preprocessing your data!</p>
 <form action="{% url 'preprocessing-text' %}">
-    <button class = 'btn btn-primary btn-sm' style = 'font-size: 30px'>Go Back to Preprocessing</button>
+    <div class="text-center">
+        <button class='btn btn-primary btn-sm' style='font-size: 30px'>Go Back to Preprocessing</button>
+    </div>
 </form>
 
 {% endblock content %}

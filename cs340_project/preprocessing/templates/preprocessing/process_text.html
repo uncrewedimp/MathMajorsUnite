@@ -7,7 +7,7 @@
 </div>
 
 <!-- Ask user a question with yes or no options -->
-<div class="col-sm-6">
+<!-- <div class="col-sm-6">
     <div class="card">
         <div class="card-body">
             <h5 class="card-title text-center">Question</h5>
@@ -22,17 +22,17 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- This will be shown if yes -->
-<div id="Yes" class="collapse">
+<!-- <div id="Yes" class="collapse">
     This will be shown if the user clicks yes.
-</div>
+</div> -->
 
 <!-- This will be shown if no -->
-<div id="No" class="collapse">
+<!-- <div id="No" class="collapse">
     This will be shown if the user clicks no.
-</div>
+</div> -->
 
 <h2>Your Files</h2>
 {% if texts %}
@@ -57,7 +57,7 @@
             </td>
             <td>
                 <!-- Always use post to modify data in database -->
-                
+
                 {{ tx.cols }}
             </td>
             <!-- <td>
@@ -77,19 +77,25 @@
     </tbody>
 </table>
 {% else %}
-<p>Sorry, you don't have any files uploaded right now. Please go back to the <a href="{% url 'preprocessing-text'%}">upload page</a> to load some files!</p>
+<p>Sorry, you don't have any files uploaded right now. Please go back to the <a
+        href="{% url 'preprocessing-text'%}">upload page</a> to load some files!</p>
 
 {% endif %}
 
 <!-- List different functionalities in h2 headers -->
-<h2>Merging Files</h2>
+<h2 class="text-center">Merging Files</h2>
 <!-- button for calling function to merge files -->
 <form method="post" action="{% url 'text_call' %}?fn_code=1">
     {% csrf_token %}
-    <button class="btn btn-primary btn-sm">Merge</button>
+    <div class="text-center">
+        <button class="btn btn-primary btn-lg">Merge</button>
+    </div>
+    <br>
 </form>
 
-<h2>Editing Columns</h2>
+<!-- I formatted the section above so that it is in the center of the page (hopefully it won't cause problems) -->
+
+<h2 class="text-center">Editing Columns</h2>
 <!-- button for calling function to edit columns -->
 <!-- {% if code %}
     <h1>{{ fn_code }}</h1>
