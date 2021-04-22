@@ -34,7 +34,7 @@
     This will be shown if the user clicks no.
 </div> -->
 
-<h2>Your Files</h2>
+<h2 class="text-center">Your Files</h2>
 {% if texts %}
 <table class="table">
     <thread>
@@ -90,8 +90,11 @@
 
 {% endif %}
 
+<!-- <hr class="mt-3 mb-3" /> -->
+<!-- <br class="mt-10 mb-10"> -->
+
 <!-- List different functionalities in h2 headers -->
-<h2 class="text-center">Merging Files</h2>
+<h2 class="text-center mt-4">Merging Files</h2>
 <!-- button for calling function to merge files -->
 <!-- <form method="post" action="{% url 'text_call' %}?fn_code=1"> -->
 <form method="post" action="{% url 'merge' %}">
@@ -125,7 +128,7 @@
 
 <!-- I formatted the section above so that it is in the center of the page (hopefully it won't cause problems) -->
 
-<h2 class="text-center">Editing Columns</h2>
+<h2 class="text-center mt-4">Editing Columns</h2>
 <!-- button for calling function to edit columns -->
 <!-- {% if code %}
     <h1>{{ fn_code }}</h1>

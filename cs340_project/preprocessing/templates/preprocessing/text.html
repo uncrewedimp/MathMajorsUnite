@@ -20,14 +20,13 @@
                         <button class='btn btn-primary btn-sm' style='font-size: 30px'>Upload CSVs</button>
                     </div>
                 </form>
-
             </div>
         </div>
     </div>
 </div>
 
 
-<h2>Uploaded CSV Files</h2>
+<h2 class="text-center mt-4">Uploaded CSV Files</h2>
 {% if texts %}
 <table class="table">
     <thread>
@@ -63,7 +62,7 @@
 {% endif %}
 
 
-<h2>Preprocessing</h2>
+<h2 class="text-center mt-4">Preprocessing</h2>
 <form action="{% url 'process_text' %}">
     <div class="text-center">
         <button class='btn btn-primary btn-lg' style='font-size: 20px'>Start Processing!</button>
