@@ -1,0 +1,39 @@
+{% extends 'preprocessing/base.html' %}
+{% block content %}
+{% load static %}
+<!-- <h1>Preprocessing and Machine Learning</h1>
+<p>This is the home page for data preprocessing and machine learning tools. Here you can select between image and text
+  preprocessing.</p> -->
+
+<div class="jumbotron">
+  <h1 class="display-4">Preprocessing and Machine Learning</h1>
+  <p class="lead">This is the home page for data preprocessing and machine learning tools.</p>
+</div>
+
+<div class="row justify-content-center">
+
+  <!-- <div class="col-sm-6">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'preprocessing/harold.png' %}">
+      <div class="card-body">
+        <h5 class="card-title">Image Preprocessing</h5>
+        <p class="card-text">Go here if you want to upload images for preprocessing.</p>
+        <a href="{% url 'preprocessing-image'%}" class="stretched-link"></a>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="col-sm-6">
+    <div class="card text-center">
+      <img class="card-img-top" src="{% static 'preprocessing/text.png' %}">
+      <div class="card-body">
+        <h5 class="card-title">CSV Preprocessing</h5>
+        <p class="card-text">Go here if you want to upload CSV files for preprocessing.</p>
+        <a href="{% url 'preprocessing-text'%}" class="stretched-link"></a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock content %}
